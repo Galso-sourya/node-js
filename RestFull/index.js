@@ -11,7 +11,7 @@ app.set("views",path.join(__dirname,"views"))
 app.use(express.urlencoded({extended:true}))
 app.use(methodOverride("_method"))
 //as we do not have database, we are using array
-const comments=[
+let comments=[
     {id:uuid(),user:"kartik",text:"dnjdnd"},
     {id:uuid(),user:"ganesh",text:"cjdncjdnc"},
 ]
