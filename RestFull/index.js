@@ -51,4 +51,10 @@ app.patch("/comments/:commentid", (req,res)=>{
     comment.text=req.body.text;
     res.redirect("/comments")
 })
+//delete a comment
+app.delete("/comments/:commentid",(req,res)=>{
+const {commentid}=req.params;
+    comments=comments.filter((comment)=>comment.id!==commentid)
+    res.redirect("/comments")
+})
 app.listen(port, () => console.log(`Example app listening at http://localhost:3000`))
