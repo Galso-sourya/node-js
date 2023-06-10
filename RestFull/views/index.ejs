@@ -13,6 +13,9 @@
                 <a href="/comments/<%= comment.id %>">Show</a>
                 <a href="/comments/<%= comment.id %>/edit">Edit</a>
                 <!--space should not be there before edit-->
+                <form action="/comments/<%= comment.id %>?_method=DELETE" method="post">
+                <button>Delete</button>
+                </form>
             </li>
         <% } %>
     </ul>
